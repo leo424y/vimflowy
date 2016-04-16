@@ -1,6 +1,8 @@
 gulp = require 'gulp'
 
+babel = require 'gulp-babel'
 browserify = require 'browserify'
+coffee = require 'gulp-coffee'
 del = require 'del'
 express = require 'express'
 jade = require 'gulp-jade'
@@ -22,6 +24,7 @@ handle = (stream) ->
 out_folder = 'public'
 
 test_glob = 'test/tests/*.coffee'
+js_glob = 'assets/**/*.js'
 coffee_glob = 'assets/**/*.coffee'
 sass_glob = 'assets/css/**/*.sass'
 

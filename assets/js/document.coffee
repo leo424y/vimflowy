@@ -4,7 +4,7 @@ utils = require './utils.coffee'
 errors = require './errors.coffee'
 constants = require './constants.coffee'
 Logger = require './logger.coffee'
-EventEmitter = require './eventEmitter.coffee'
+EventEmitter = require './eventEmitter.js'
 
 class Row
   constructor: (@parent, @id) ->

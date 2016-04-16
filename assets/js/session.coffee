@@ -8,7 +8,7 @@ errors = require './errors.coffee'
 Cursor = require './cursor.coffee'
 Register = require './register.coffee'
 Logger = require './logger.coffee'
-EventEmitter = require './eventEmitter.coffee'
+EventEmitter = require './eventEmitter.js'
 
 Modes = require './modes.coffee'
 MODES = Modes.modes

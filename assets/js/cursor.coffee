@@ -1,6 +1,6 @@
 utils = require './utils.coffee'
 constants = require './constants.coffee'
-EventEmitter = require './eventEmitter.coffee'
+EventEmitter = require './eventEmitter.js'
 
 ###
 Cursor represents a cursor within a session

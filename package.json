@@ -26,6 +26,7 @@
     "tv4": "latest"
   },
   "devDependencies": {
+    "babel-preset-es2015": "latest",
     "blanket": "latest",
     "browserify": "latest",
     "coffeeify": "latest",
@@ -33,6 +34,8 @@
     "mocha-multi": "latest",
     "del": "latest",
     "gulp": "latest",
+    "gulp-babel": "latest",
+    "gulp-coffee": "latest",
     "gulp-jade": "latest",
     "gulp-mocha": "latest",
     "gulp-rename": "latest",
