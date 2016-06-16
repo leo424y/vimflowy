@@ -271,7 +271,6 @@ class Session extends EventEmitter
           # this should not happen, since the state should be the same as before
           throw new errors.GenericError "Failed to redo mutation: #{mutation.str()}"
         mutation.remutate @
-        mutation.moveCursor @cursor
       Logger.logger.debug ") END REDO"
       @restoreViewState oldState.after
 
@@ -792,6 +791,7 @@ class Session extends EventEmitter
 
     siblings = (@document.getSiblingRange row, 0, (numblocks-1)).filter ((sib) -> sib != null)
     for sib in siblings
+      console.log 'OLD PARENT WTF', sib
       @moveBlock sib, newparent, -1
     return newparent
 

@@ -21,6 +21,7 @@ class Path
     ancestors
 
   child: (row) ->
+    errors.assert (row != @row)
     new Path @, row
 
   isDescendant: (other_path) ->

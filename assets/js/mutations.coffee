@@ -123,6 +123,7 @@ class ChangeChars extends Mutation
 
 class MoveBlock extends Mutation
   constructor: (@path, @parent, @index = -1) ->
+    console.log 'OLD PARENT WTF', @path
     @old_parent = @path.parent
 
   str: () ->
@@ -142,10 +143,11 @@ class MoveBlock extends Mutation
     session.document._move @path.row, @parent.row, @old_parent.row, @old_index
 
   moveCursor: (cursor) ->
-    walk = cursor.path.walkFrom @old_parent
+    walk = cursor.path.walkFrom @path
     if walk == null
       return
-    cursor._setPath @parent.extend walk
+    console.log('cursor', do cursor.path.getAncestry, 'old pare', do @old_parent.getAncestry, 'parent', do @parent.getAncestry, 'walk', walk)
+    cursor._setPath (@parent.extend @path.row).extend walk
 
 class AttachBlocks extends Mutation
   constructor: (@parent, @cloned_rows, @index = -1, @options = {}) ->
